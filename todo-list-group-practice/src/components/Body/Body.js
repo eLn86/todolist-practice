@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
 
-// Import components
+// Create Component by EL
+import Create from '../Create/Create';
+// Search Component by Han
 import Search from '../Search/Search.js';
 
 class Body extends Component {
   render() {
     return (
       <div className="row">
-        <Search/>
+      <Create />
+      <Search/>
       </div>
     );
   }
