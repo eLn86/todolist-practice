@@ -1,8 +1,9 @@
 .searchBox {
-  border: 5px solid black;
 }
 
 .searchContainer {
   text-align:center;
-  border: 5px solid black;
+  height: 500px;
+  border-bottom: 3px dotted black;
+  margin-bottom: 20px;
 }

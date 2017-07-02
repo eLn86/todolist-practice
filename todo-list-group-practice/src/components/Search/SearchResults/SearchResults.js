@@ -11,11 +11,10 @@ export default class SearchResults extends React.Component {
 
   render() {
     return (
-      <div className= "row">
+      <div className= "row searchResultsRow">
         <div className="col-md-12 searchResults">
-          <span>BLORG</span>
-          <span>BLORG</span>
-          <span>BLORG</span>
+          <h3 className="taskName">BLORG</h3>
+          <input type="checkbox" className="taskCheckBox"/>
         </div>
       </div>
     );

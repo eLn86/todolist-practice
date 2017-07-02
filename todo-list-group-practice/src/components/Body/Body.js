@@ -6,11 +6,20 @@ import Create from '../Create/Create';
 import Search from '../Search/Search.js';
 
 class Body extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      // Task Array to handle all task rows
+      tasks: []
+    }
+  }
   render() {
+    var rows = this.state.tasks;
     return (
       <div className="row">
-      <Create />
       <Search/>
+      {rows}
+      <Create />
       </div>
     );
   }
