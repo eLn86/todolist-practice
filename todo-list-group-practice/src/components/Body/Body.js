@@ -17,7 +17,7 @@ class Body extends Component {
     var rows = this.state.tasks;
     return (
       <div className="row">
-      <Search/>
+      <Search tasks={this.state.tasks}/>
       {rows}
       <Create />
       </div>

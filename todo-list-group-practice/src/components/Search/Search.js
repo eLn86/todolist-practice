@@ -11,6 +11,21 @@ import './Search.css';
 export default class Search extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      results: []
+    }
+  }
+
+  /****/
+  /*** Function: returnSearchResult(result) */
+  /*** Description: Concatenates result into results array */
+  /*** Passed into: SearchBar.js */
+  /****/
+
+  returnSearchResult = (result) => {
+    this.setState({
+      results: this.state.results.concat([result]),
+    })
   }
 
   render() {
@@ -18,9 +33,9 @@ export default class Search extends React.Component {
       <div className="row searchContainer">
         <div className="col-md-12 searchBox">
 
-            <SearchBar/>
+            <SearchBar returnSearchResult= {this.returnSearchResult} tasks={this.props.tasks}/>
 
-            <SearchResults/>
+            <SearchResults searchResults={this.state.results}/>
 
 
         </div>
