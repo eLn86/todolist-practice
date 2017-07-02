@@ -1,4 +1,6 @@
 import React, {PropTypes} from 'react';
+
+// Import static files
 import './SearchResults.css';
 
 
