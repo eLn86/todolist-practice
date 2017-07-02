@@ -8,9 +8,9 @@ class Create extends Component {
     return (
       <div className="row createTaskRow">
         <div className="col-md-12">
-        <input className="taskName"
+        <input className="taskName input-lg"
                type= "text"/>
-          <button className="btn btn-primary">Create Task</button>
+          <button className="btn btn-lg btn-primary">Create Task</button>
         </div>
       </div>
     );
