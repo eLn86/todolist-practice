@@ -1,6 +1,10 @@
 import React, {PropTypes} from 'react';
+
+// Import components
 import SearchBar from './SearchBar/SearchBar.js';
 import SearchResults from './SearchResults/SearchResults.js';
+
+// Import static files
 import './Search.css';
 
 
