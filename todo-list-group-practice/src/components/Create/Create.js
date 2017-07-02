@@ -16,7 +16,6 @@ class Create extends Component {
   onChange = (e) => {
     var taskName = e.target.value;
     var taskID = e.target.id;
-    console.log(taskID);
     this.setState({
       taskName: taskName,
       id: taskID
@@ -24,7 +23,6 @@ class Create extends Component {
   }
 
   createTaskRow = () => {
-    console.log(this.state);
     var state = this.state;
     this.props.createRow(state);
     this.setState({

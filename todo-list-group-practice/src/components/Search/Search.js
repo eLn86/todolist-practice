@@ -23,9 +23,13 @@ export default class Search extends React.Component {
   /****/
 
   returnSearchResult = (result) => {
+
     this.setState({
       results: this.state.results.concat([result]),
     })
+
+    console.log(this.state.results);
+
   }
 
   render() {
@@ -35,7 +39,7 @@ export default class Search extends React.Component {
 
             <SearchBar returnSearchResult= {this.returnSearchResult} tasks={this.props.tasks}/>
 
-            <SearchResults searchResults={this.state.results}/>
+            {this.state.results}
 
 
         </div>
