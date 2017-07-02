@@ -1,4 +1,6 @@
 import React, {PropTypes} from 'react';
+
+// Import static files
 import './SearchBar.css';
 
 export default class SearchBar extends React.Component {
