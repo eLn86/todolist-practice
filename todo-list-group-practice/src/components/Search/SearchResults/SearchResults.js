@@ -1,9 +1,11 @@
 import React, {PropTypes} from 'react';
 
 // Import static files
+
 import './SearchResults.css';
-
-
+/*
+<input type="checkbox" className="taskCheckBox"/>
+*/
 export default class SearchResults extends React.Component {
   constructor(props) {
     super(props);
@@ -13,8 +15,9 @@ export default class SearchResults extends React.Component {
     return (
       <div className= "row searchResultsRow">
         <div className="col-md-12 searchResults">
-          <h3 className="taskName">BLORG</h3>
-          <input type="checkbox" className="taskCheckBox"/>
+
+          {this.props.results}
+
         </div>
       </div>
     );
