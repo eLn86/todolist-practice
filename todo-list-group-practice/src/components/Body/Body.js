@@ -25,7 +25,7 @@ class Body extends Component {
 
     // New Object creation
     let newTask = {};
-    newTask.name = taskRow.taskName;
+    newTask.taskName = taskRow.taskName;
     newTask.id = taskRow.id;
 
     // Creating new variable and push taskRow information into it
@@ -46,22 +46,24 @@ class Body extends Component {
   createTaskRows = () => {
     var taskRows = [];
     this.state.tasks.forEach((task, index) => {
-      taskRows.push(<TaskRow taskName={task.name}
+      taskRows.push(<TaskRow taskName={task.taskName}
                                    id={task.id}
                                    key={task.id}/>)
     })
     return taskRows;
+    this.setState({
+      tasks: taskRows
+    })
   }
 
   render() {
     var rows = this.createTaskRows();
     return (
       <div className="row">
-      <Search tasks={this.state.tasks}/>
-
       <div className="col-md-12 taskRows">
         {rows}
       </div>
+      <Search tasks={this.state.tasks}/>
 
       <Create createRow={this.createTask}/>
       </div>
