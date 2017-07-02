@@ -1,4 +1,5 @@
 import React, {PropTypes} from 'react';
+import TaskRow from '../../TaskRow/TaskRow.js'
 
 // Import static files
 import './SearchBar.css';
@@ -26,17 +27,20 @@ export default class SearchBar extends React.Component {
   /****/
   /*** Function: findResult(event) */
   /*** Description: Filters tasks array passed by Search.js for the task matching the search name */
-  /***              and returns the searchInput state using return search result. */ 
+  /***              and returns the searchInput state using return search result. */
   /*** Passed into: nil */
   /****/
 
   findResult = (event) => {
 
     var foundTask = this.props.tasks.filter((el, index) =>
-                    el.props.taskName === this.state.searchInput
+                    el.taskName === this.state.searchInput
                   );
 
-    this.props.returnSearchResult(this.state.searchInput);
+
+    this.props.returnSearchResult(<TaskRow taskName= {foundTask[0].taskName} key= {foundTask[0].id}/>);
+
+
 
     this.setState({
       searchInput: "",

@@ -35,6 +35,8 @@ class Body extends Component {
     this.setState({
       tasks: tasks
     })
+
+    console.log(this.state.tasks);
   }
 
   /*
@@ -51,9 +53,7 @@ class Body extends Component {
                                    key={task.id}/>)
     })
     return taskRows;
-    this.setState({
-      tasks: taskRows
-    })
+
   }
 
   render() {
