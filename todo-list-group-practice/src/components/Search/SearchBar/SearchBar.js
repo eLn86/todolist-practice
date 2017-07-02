@@ -10,10 +10,11 @@ export default class SearchBar extends React.Component {
 
   render() {
     return (
-      <div className= "row">
+      <div className= "row searchBarRow">
         <div className="col-md-12 searchBar">
-          <input type='string'/>
-          <button className= 'btn btn-lg btn-primary'type='submit'>DO THE THING</button>
+          <input type='string'
+                 className="searchInput input-lg"/>
+          <button className= 'btn btn-lg btn-primary'type='submit'>Search Tasks</button>
         </div>
       </div>
     );
