@@ -57,7 +57,7 @@ class Body extends Component {
     var rows = this.createTaskRows();
     return (
       <div className="row">
-      <Search/>
+      <Search tasks={this.state.tasks}/>
 
       <div className="col-md-12 taskRows">
         {rows}
