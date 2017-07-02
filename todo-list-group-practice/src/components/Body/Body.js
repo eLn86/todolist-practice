@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+
+// Import components
 import Search from '../Search/Search.js';
 
 class Body extends Component {
