@@ -1,3 +1,8 @@
 .createTaskRow {
   text-align: center
 }
+
+.taskName {
+  margin-right: 20px;
+  width: 70%;
+}
