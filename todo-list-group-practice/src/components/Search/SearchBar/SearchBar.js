@@ -26,21 +26,22 @@ export default class SearchBar extends React.Component {
   /****/
   /*** Function: findResult(event) */
   /*** Description: Filters tasks array passed by Search.js for the task matching the search name */
-  /***              and returns the searchInput state using return search result. */ 
+  /***              and returns the searchInput state using return search result. */
   /*** Passed into: nil */
   /****/
 
   findResult = (event) => {
+    var taskArray = this.props.tasks;
 
-    var foundTask = this.props.tasks.filter((el, index) =>
-                    el.props.taskName === this.state.searchInput
-                  );
+    var foundTask = taskArray.filter((task) => {
+      return task.taskName === this.state.searchInput;
+    });
 
-    this.props.returnSearchResult(this.state.searchInput);
+    this.props.returnSearchResult(foundTask);
 
-    this.setState({
-      searchInput: "",
-    })
+    // this.setState({
+    //   searchInput: "",
+    // })
 
   }
 

@@ -24,9 +24,11 @@ class Create extends Component {
   }
 
   createTaskRow = () => {
-    console.log(this.state);
     var state = this.state;
-    this.props.createRow(state);
+    if(state.taskName !== "") {
+      this.props.createRow(state);
+    }
+
     this.setState({
       taskName: "",
       id: uuid.v4()

@@ -27,7 +27,6 @@ class Body extends Component {
     let newTask = {};
     newTask.taskName = taskRow.taskName;
     newTask.id = taskRow.id;
-
     // Creating new variable and push taskRow information into it
     let tasks = this.state.tasks;
     tasks.push(newTask);
@@ -51,9 +50,6 @@ class Body extends Component {
                                    key={task.id}/>)
     })
     return taskRows;
-    this.setState({
-      tasks: taskRows
-    })
   }
 
   render() {
